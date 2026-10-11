@@ -1,0 +1,1406 @@
+{
+  "year": 2026,
+  "refreshedAt": "2026-10-11T06:01:37.3648712Z",
+  "source": "王者营地历史战绩与五排评分表",
+  "roster": [
+    "呜呀捉飞鸡",
+    "玩家大薄荷糖",
+    "积极向上的名",
+    "只求爱的人",
+    "Swiftie"
+  ],
+  "matches": [
+    {
+      "date": "2026-10-08",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "墨子",
+          "role": "",
+          "rating": 9.6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "小乔",
+          "role": "",
+          "rating": 9.9,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "百里守约",
+          "role": "",
+          "rating": 13.3,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "元流之子(坦克)",
+          "role": "",
+          "rating": 5.7,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "孙悟空",
+          "role": "",
+          "rating": 8.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "钟馗",
+          "role": "",
+          "rating": 9.7,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "妲己",
+          "role": "",
+          "rating": 7.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "后羿",
+          "role": "",
+          "rating": 11.6,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "元流之子(坦克)",
+          "role": "",
+          "rating": 7.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "赵云",
+          "role": "",
+          "rating": 7.4,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "result": "loss",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "兰陵王",
+          "role": "",
+          "rating": 10.5,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "墨子",
+          "role": "",
+          "rating": 9.2,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "庄周",
+          "role": "",
+          "rating": 6.7,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "狄仁杰",
+          "role": "",
+          "rating": 6.9,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "孙权",
+          "role": "",
+          "rating": 8.7,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "李信",
+          "role": "",
+          "rating": 7.1,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "云缨",
+          "role": "",
+          "rating": 8.9,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "百里守约",
+          "role": "",
+          "rating": 11.7,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "刘禅",
+          "role": "",
+          "rating": 6.7,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "王维",
+          "role": "",
+          "rating": 8.4,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "干将莫邪",
+          "role": "",
+          "rating": 7.8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "张飞",
+          "role": "",
+          "rating": 9.1,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "鲁班七号",
+          "role": "",
+          "rating": 12.5,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "元流之子(坦克)",
+          "role": "",
+          "rating": 7.4,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "宫本武藏",
+          "role": "",
+          "rating": 7.2,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "钟馗",
+          "role": "",
+          "rating": 6.9,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "云缨",
+          "role": "",
+          "rating": 11.5,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "后羿",
+          "role": "",
+          "rating": 8.8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "元流之子(坦克)",
+          "role": "",
+          "rating": 7.7,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "妲己",
+          "role": "",
+          "rating": 7.6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "墨子",
+          "role": "",
+          "rating": 11.1,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "云缨",
+          "role": "",
+          "rating": 9.5,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "百里守约",
+          "role": "",
+          "rating": 11,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "夏侯惇",
+          "role": "",
+          "rating": 8.8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "西施",
+          "role": "",
+          "rating": 9.6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "嬴政",
+          "role": "",
+          "rating": 11.2,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "云缨",
+          "role": "",
+          "rating": 8.8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "孙尚香",
+          "role": "",
+          "rating": 10.5,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "刘邦",
+          "role": "",
+          "rating": 5,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "钟馗",
+          "role": "",
+          "rating": 10.4,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "result": "loss",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "扁鹊",
+          "role": "",
+          "rating": 10,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "云缨",
+          "role": "",
+          "rating": 8.4,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "孙膑",
+          "role": "",
+          "rating": 7.7,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "孙策",
+          "role": "",
+          "rating": 6.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "卢雅那",
+          "role": "",
+          "rating": 10.1,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "result": "loss",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "王昭君",
+          "role": "",
+          "rating": 10.6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "夏洛特",
+          "role": "",
+          "rating": 8.5,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "百里守约",
+          "role": "",
+          "rating": 10.9,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "曜",
+          "role": "",
+          "rating": 6.8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "张良",
+          "role": "",
+          "rating": 8.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "小乔",
+          "role": "",
+          "rating": 8.1,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "廉颇",
+          "role": "",
+          "rating": 10.1,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "牛魔",
+          "role": "",
+          "rating": 10.4,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "赵云",
+          "role": "",
+          "rating": 8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "孙尚香",
+          "role": "",
+          "rating": 13.2,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "妲己",
+          "role": "",
+          "rating": 10.1,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "廉颇",
+          "role": "",
+          "rating": 9.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "刘禅",
+          "role": "",
+          "rating": 10.9,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "夏侯惇",
+          "role": "",
+          "rating": 9.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "后羿",
+          "role": "",
+          "rating": 10.8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "武则天",
+          "role": "",
+          "rating": 8.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "鲁班大师",
+          "role": "",
+          "rating": 10.2,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "老夫子",
+          "role": "",
+          "rating": 13.5,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "阿古朵",
+          "role": "",
+          "rating": 7,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "马可波罗",
+          "role": "",
+          "rating": 8.6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "后羿",
+          "role": "",
+          "rating": 5.7,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "云缨",
+          "role": "",
+          "rating": 11.5,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "鲁班七号",
+          "role": "",
+          "rating": 9.4,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "刘禅",
+          "role": "",
+          "rating": 10.2,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "裴擒虎",
+          "role": "",
+          "rating": 7.4,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "result": "loss",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "吕布",
+          "role": "",
+          "rating": 6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "鲁班大师",
+          "role": "",
+          "rating": 8.4,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "小乔",
+          "role": "",
+          "rating": 7.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "狄仁杰",
+          "role": "",
+          "rating": 7.1,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "赵云",
+          "role": "",
+          "rating": 5.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "result": "loss",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "吕布",
+          "role": "",
+          "rating": 5.8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "小乔",
+          "role": "",
+          "rating": 8.5,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "蒙犽",
+          "role": "",
+          "rating": 7.5,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "大司命",
+          "role": "",
+          "rating": 3.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "钟馗",
+          "role": "",
+          "rating": 4.9,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "墨子",
+          "role": "",
+          "rating": 9.1,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "嫦娥",
+          "role": "",
+          "rating": 7.6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "百里守约",
+          "role": "",
+          "rating": 8.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "曜",
+          "role": "",
+          "rating": 6.4,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "哪吒",
+          "role": "",
+          "rating": 10.1,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "妲己",
+          "role": "",
+          "rating": 9,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "鲁班大师",
+          "role": "",
+          "rating": 15.4,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "百里守约",
+          "role": "",
+          "rating": 8.1,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "夏侯惇",
+          "role": "",
+          "rating": 12.1,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "百里玄策",
+          "role": "",
+          "rating": 8.1,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "result": "loss",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "马可波罗",
+          "role": "",
+          "rating": 6.9,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "元流之子(辅助)",
+          "role": "",
+          "rating": 10.5,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "项羽",
+          "role": "",
+          "rating": 8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "墨子",
+          "role": "",
+          "rating": 7,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "心魔六耳",
+          "role": "",
+          "rating": 7.6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "白起",
+          "role": "",
+          "rating": 7.2,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "云缨",
+          "role": "",
+          "rating": 12.3,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "墨子",
+          "role": "",
+          "rating": 9.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "扁鹊",
+          "role": "",
+          "rating": 8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "孙权",
+          "role": "",
+          "rating": 8.8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "海诺",
+          "role": "",
+          "rating": 8.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "云缨",
+          "role": "",
+          "rating": 10.6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "虞姬",
+          "role": "",
+          "rating": 12.4,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "孙策",
+          "role": "",
+          "rating": 7.8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "赵怀真",
+          "role": "",
+          "rating": 8.2,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "result": "loss",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "孙策",
+          "role": "",
+          "rating": 6.4,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "墨子",
+          "role": "",
+          "rating": 9.6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "狄仁杰",
+          "role": "",
+          "rating": 8.8,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "曜",
+          "role": "",
+          "rating": 7.3,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "孙膑",
+          "role": "",
+          "rating": 12.5,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "武则天",
+          "role": "",
+          "rating": 7.4,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "元流之子(辅助)",
+          "role": "",
+          "rating": 9.7,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "钟无艳",
+          "role": "",
+          "rating": 9.6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "阿古朵",
+          "role": "",
+          "rating": 5.4,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "卢雅那",
+          "role": "",
+          "rating": 10.7,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "营地对局详情核验五位队友同阵营",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "干将莫邪",
+          "role": "",
+          "rating": 9.6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "云缨",
+          "role": "",
+          "rating": 10.7,
+          "mvp": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "孙尚香",
+          "role": "",
+          "rating": 8.9,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "少司缘",
+          "role": "",
+          "rating": 6,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        },
+        {
+          "name": "Swiftie",
+          "hero": "项羽",
+          "role": "",
+          "rating": 8.7,
+          "mvp": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
+        }
+      ]
+    }
+  ]
+}
