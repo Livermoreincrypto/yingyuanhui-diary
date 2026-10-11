@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10131d">
+<title>❀❀应援会开黑日记 · 2026</title>
+<style>
+:root{--bg:#10131d;--surface:#171c28;--surface-2:#202737;--line:#30394c;--text:#f4f5fb;--muted:#9aa6bb;--gold:#f4c66a;--mint:#68e0bc;--pink:#ff7f9d;--blue:#8eacff;--shadow:0 20px 60px rgba(0,0,0,.24)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 15% -5%,rgba(109,87,188,.24),transparent 35%),radial-gradient(ellipse at 92% 15%,rgba(53,154,151,.12),transparent 32%),var(--bg);color:var(--text);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+button,input,select{font:inherit}button{color:inherit}a{color:inherit;text-decoration:none}
+.shell{width:min(1120px,calc(100% - 40px));margin:auto}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.07)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:750;letter-spacing:.02em}.brand-mark{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;color:#16151c;background:linear-gradient(145deg,#f7d77f,#e8a856);font-size:19px;box-shadow:0 6px 20px rgba(244,198,106,.18)}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:500;letter-spacing:.12em;margin-top:2px}
+.top-actions{display:flex;align-items:center;gap:12px}.source-pill{display:flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:#d7deeb;font-size:12px}.dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(244,198,106,.12)}
+.btn{border:1px solid var(--line);background:var(--surface);padding:10px 15px;border-radius:12px;cursor:pointer;transition:.18s ease;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:650}.btn:hover{border-color:#59647d;transform:translateY(-1px);background:#202738}.btn.primary{background:var(--gold);border-color:var(--gold);color:#241e13;box-shadow:0 8px 22px rgba(244,198,106,.12)}.btn.primary:hover{background:#ffd985}.btn.ghost{background:transparent}
+.hero{padding:50px 0 27px;display:grid;grid-template-columns:1.18fr .82fr;gap:30px;align-items:center}.eyebrow{color:var(--gold);font-size:11px;font-weight:750;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:9px}.eyebrow:before{content:"";width:23px;height:1px;background:var(--gold)}
+h1{font-size:clamp(38px,5vw,62px);line-height:1.07;letter-spacing:-.055em;margin:16px 0 15px}h1 em{font-style:normal;color:var(--gold)}.hero p{color:var(--muted);font-size:15px;line-height:1.8;max-width:590px;margin:0}
+.hero-art{min-height:242px;position:relative;border:1px solid rgba(255,255,255,.07);border-radius:24px;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.015));box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center}.hero-art:before,.hero-art:after{content:"";position:absolute;border-radius:50%;filter:blur(1px)}.hero-art:before{width:220px;height:220px;right:20px;top:-90px;background:rgba(142,172,255,.16)}.hero-art:after{width:180px;height:180px;left:-62px;bottom:-100px;background:rgba(244,198,106,.13)}
+.constellation{position:relative;z-index:1;width:85%;height:190px}.orbit{position:absolute;border:1px solid rgba(244,198,106,.28);border-radius:50%;width:220px;height:95px;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-20deg)}.orbit.two{width:220px;height:95px;transform:translate(-50%,-50%) rotate(28deg);border-color:rgba(142,172,255,.28)}.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:25px;background:linear-gradient(145deg,#f6d57e,#de9947);color:#2a2117;display:grid;place-items:center;font-size:32px;box-shadow:0 0 55px rgba(244,198,106,.25)}.star{position:absolute;width:46px;height:46px;border-radius:16px;display:grid;place-items:center;font-weight:800;font-size:14px;background:#222a3a;border:1px solid #46516a;color:#e7ebf4;box-shadow:0 10px 25px rgba(0,0,0,.2)}.s1{left:9%;top:20%}.s2{right:8%;top:20%;color:#bbcaFF}.s3{left:8%;bottom:12%;color:#f6c5d0}.s4{right:9%;bottom:12%;color:#8ce5ca}.art-caption{position:absolute;z-index:2;bottom:15px;left:0;right:0;text-align:center;color:#a9b3c7;font-size:11px;letter-spacing:.13em}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:4px 0 40px}.stat{padding:19px 20px;border-radius:16px;border:1px solid rgba(255,255,255,.07);background:linear-gradient(130deg,rgba(255,255,255,.045),rgba(255,255,255,.015))}.stat-label{color:var(--muted);font-size:12px}.stat-value{font-size:28px;font-weight:760;letter-spacing:-.04em;margin:10px 0 4px;font-variant-numeric:tabular-nums}.stat-note{font-size:11px;color:#8390a6}.stat:nth-child(2) .stat-value{color:var(--mint)}.stat:nth-child(3) .stat-value{color:var(--gold)}.stat:nth-child(4) .stat-value{color:var(--blue)}
+.section{padding:20px 0 38px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:18px}.section-kicker{font-size:10px;color:var(--gold);letter-spacing:.16em;font-weight:750}h2{font-size:24px;letter-spacing:-.04em;margin:6px 0 0}.section-desc{color:var(--muted);font-size:12px;line-height:1.7;margin:6px 0 0}.subtle{color:var(--muted);font-size:12px}
+.two-col{display:grid;grid-template-columns:1.15fr .85fr;gap:28px}.roster{border-top:1px solid var(--line)}.roster-row{display:grid;grid-template-columns:48px minmax(0,1fr) 95px 110px 70px;align-items:center;gap:12px;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,.07)}.rank-no{width:32px;height:32px;border-radius:11px;background:var(--surface-2);display:grid;place-items:center;color:#c3ccdb;font-weight:750;font-size:12px}.roster-row:first-child .rank-no{background:rgba(244,198,106,.16);color:var(--gold)}.member{font-weight:700;font-size:14px}.member-sub{color:var(--muted);font-size:11px;margin-top:4px}.cell{text-align:right;font-variant-numeric:tabular-nums}.cell strong{font-size:14px}.cell small{display:block;color:var(--muted);font-size:10px;margin-top:3px}.mini-bar{height:5px;background:#2b3445;border-radius:9px;overflow:hidden;margin-top:6px}.mini-bar i{height:100%;display:block;background:linear-gradient(90deg,#68e0bc,#f4c66a);border-radius:9px}
+.empty{padding:28px 18px;text-align:center;border:1px dashed #3b465c;border-radius:16px;color:var(--muted);font-size:13px;line-height:1.7}.empty b{display:block;color:#e4e8f2;font-size:14px;margin-bottom:4px}
+.awards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.award{min-height:120px;padding:15px;border-radius:16px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.065);position:relative;overflow:hidden}.award:after{content:"";position:absolute;right:-23px;bottom:-35px;width:85px;height:85px;border:1px solid rgba(255,255,255,.06);border-radius:50%}.award-icon{font-size:19px}.award-title{font-size:12px;color:var(--muted);margin-top:9px}.award-winner{font-size:15px;font-weight:740;margin-top:4px}.award-note{font-size:10px;color:#8390a6;margin-top:4px}.award.gold .award-winner{color:var(--gold)}.award.mint .award-winner{color:var(--mint)}.award.pink .award-winner{color:var(--pink)}.award.blue .award-winner{color:var(--blue)}
+.panel{border-top:1px solid var(--line);padding-top:17px}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}.tab{background:transparent;border:1px solid var(--line);color:#b9c2d2;border-radius:999px;padding:8px 13px;font-size:12px;cursor:pointer}.tab.active{background:rgba(244,198,106,.13);border-color:rgba(244,198,106,.45);color:var(--gold)}
+.hero-empty{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;padding:19px;border-radius:18px;background:linear-gradient(120deg,rgba(142,172,255,.07),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.07)}.hero-empty h3{margin:0 0 7px;font-size:15px}.hero-empty p{margin:0;color:var(--muted);font-size:12px;line-height:1.8}.hero-empty .btn{justify-self:end}.role-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:13px}.role-card{padding:12px 11px;border-top:2px solid #48536a;background:rgba(255,255,255,.025)}.role-card strong{font-size:12px}.role-card span{display:block;color:var(--muted);font-size:10px;margin-top:7px}
+.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:620px}th{text-align:left;font-size:10px;color:var(--muted);font-weight:600;padding:11px 9px;border-bottom:1px solid var(--line)}td{padding:13px 9px;border-bottom:1px solid rgba(255,255,255,.06);font-size:12px}td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}.rank-pill{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:8px;background:var(--surface-2);font-size:10px;color:#c5ccda}
+.match-list{border-top:1px solid var(--line)}.match{display:grid;grid-template-columns:92px 72px minmax(0,1fr);gap:12px;align-items:start;padding:15px 4px;border-bottom:1px solid rgba(255,255,255,.07)}.match-date{font-size:12px;font-weight:700}.match-date small{display:block;color:var(--muted);font-size:10px;margin-top:4px}.result{font-size:10px;font-weight:800;border-radius:999px;padding:6px 9px;text-align:center}.result.win{color:var(--mint);background:rgba(104,224,188,.12)}.result.loss{color:var(--pink);background:rgba(255,127,157,.12)}.match-content{min-width:0}.match-picks{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.match-pick{min-width:0;padding:8px;background:#1a2030;border:1px solid rgba(255,255,255,.06);border-radius:10px}.match-pick strong{display:block;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.match-pick span{display:block;color:#d7deeb;font-size:11px;margin-top:3px}.match-pick small{display:block;color:var(--gold);font-size:10px;margin-top:3px}.match-note{font-size:11px;color:var(--muted);margin-top:7px}
+.squad-hero-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.squad-hero-card{padding:16px;border:1px solid rgba(255,255,255,.07);border-radius:16px;background:linear-gradient(140deg,rgba(255,255,255,.035),rgba(255,255,255,.012))}.squad-hero-card h3{font-size:15px;margin:0 0 10px}.hero-highlight{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:10px 0;border-top:1px solid rgba(255,255,255,.06)}.hero-highlight span{color:var(--muted);font-size:11px}.hero-highlight strong{font-size:12px;text-align:right}.hero-highlight small{grid-column:1 / -1;color:#8390a6;font-size:10px}.helper{padding:17px 18px;border:1px solid rgba(244,198,106,.22);border-radius:15px;background:rgba(244,198,106,.045);color:#c5cede;font-size:12px;line-height:1.8;margin-top:14px}.helper b{color:var(--gold)}.footer{border-top:1px solid rgba(255,255,255,.07);padding:24px 0 34px;color:#7f8ba0;font-size:11px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.footer a{color:#abb8d0;text-decoration:underline;text-decoration-color:#566176;text-underline-offset:3px}
+.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(5,7,12,.76);z-index:20;align-items:center;justify-content:center;padding:16px}.modal-backdrop.open{display:flex}.modal{width:min(760px,100%);max-height:90vh;overflow:auto;background:#171c28;border:1px solid #3b4559;border-radius:20px;box-shadow:var(--shadow);padding:22px}.modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}.modal-head h3{font-size:19px;margin:0}.modal-head p{font-size:12px;color:var(--muted);margin:7px 0 0;line-height:1.6}.close{width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:transparent;cursor:pointer}
+.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.field label{display:block;color:#aeb9cc;font-size:11px;margin-bottom:6px}.field input,.field select,.field textarea,.entry-input{width:100%;border:1px solid #3a455a;background:#111621;color:var(--text);border-radius:10px;padding:10px 11px;outline:none}.field input:focus,.field select:focus,.field textarea:focus,.entry-input:focus{border-color:#8c75c7;box-shadow:0 0 0 3px rgba(142,117,199,.12)}
+.entry-labels,.entry-row{display:grid;grid-template-columns:1.1fr 1.2fr .85fr .7fr .55fr;gap:8px;align-items:center}.entry-labels{padding:14px 0 7px;color:var(--muted);font-size:10px}.entry-row{border-top:1px solid rgba(255,255,255,.06);padding:8px 0}.entry-input{padding:8px 9px;font-size:11px}.check-cell{text-align:center}.check-cell input{accent-color:var(--gold);width:16px;height:16px}
+.modal-actions{display:flex;justify-content:space-between;gap:10px;margin-top:17px;flex-wrap:wrap}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:30;padding:11px 16px;border-radius:12px;background:#e8d49e;color:#241f14;font-size:12px;font-weight:700;transition:.22s}.toast.show{opacity:1;transform:translate(-50%,0)}.file-hidden{display:none}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-art{min-height:215px}.two-col{grid-template-columns:1fr}.match-picks{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.shell{width:min(100% - 28px,1120px)}.topbar{height:auto;min-height:64px;padding:10px 0;gap:8px;flex-wrap:wrap}.top-actions{width:100%;justify-content:space-between;gap:6px}.top-actions .btn{padding:8px 10px;font-size:11px}.source-pill{display:none}.hero{padding:34px 0 20px}.hero-art{min-height:190px}.stats{grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:28px}.stat{padding:14px}.stat-value{font-size:24px}.section{padding:13px 0 30px}.section-head{align-items:flex-start;flex-direction:column}.roster-row{grid-template-columns:36px minmax(80px,1fr) 72px 80px 42px;gap:7px;padding:12px 0}.cell strong{font-size:12px}.cell small{font-size:9px}.awards{gap:8px}.award{padding:12px;min-height:114px}.hero-empty{grid-template-columns:1fr}.hero-empty .btn{justify-self:start}.role-cards{grid-template-columns:repeat(2,1fr)}.squad-hero-grid{grid-template-columns:1fr}.match{grid-template-columns:76px 58px minmax(0,1fr);gap:8px}.match-content{grid-column:1 / -1}.match-picks{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.match-pick{padding:7px}.match-date{grid-column:1;grid-row:1}.result{grid-column:2;grid-row:1}.form-grid{grid-template-columns:1fr 1fr}.entry-labels,.entry-row{grid-template-columns:1fr 1.1fr .85fr .65fr .5fr;gap:5px}.entry-input{padding:8px 6px;font-size:10px}.footer{padding-bottom:24px}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">❀</span><span>❀❀应援会<small>FIVE STACK · DIARY 2026</small></span></a>
+    <div class="top-actions"><span class="source-pill" id="campSource"><i class="dot"></i>正在读取战绩</span></div>
+  </header>
+  <main>
+    <section class="hero">
+      <div><div class="eyebrow">SEASON RECAP · 2026</div><h1>❀❀应援会<br><em>开黑日记</em></h1><p>胜负会忘，队友的名场面不会。把每一局记下来，看看谁是稳定大腿、谁又在关键团战里“路过”。</p>
+      </div>
+      <div class="hero-art" aria-label="五人小队主题插画"><div class="constellation"><div class="orbit"></div><div class="orbit two"></div><div class="core">⚔</div><div class="star s1">上</div><div class="star s2">中</div><div class="star s3">射</div><div class="star s4">野</div></div><div class="art-caption">五个人 · 一条心 · 偶尔互相举报</div></div>
+    </section>
+    <section class="stats" aria-label="年度小队数据">
+      <div class="stat"><div class="stat-label">今年五排</div><div class="stat-value" id="matchCount">0</div><div class="stat-note">场对局</div></div>
+      <div class="stat"><div class="stat-label">小队胜率</div><div class="stat-value" id="teamRate">—</div><div class="stat-note" id="winRecord">胜 0 · 负 0</div></div>
+      <div class="stat"><div class="stat-label">小队平均评分</div><div class="stat-value" id="teamScore">—</div><div class="stat-note">五人总评分均值</div></div>
+      <div class="stat"><div class="stat-label">一起出勤</div><div class="stat-value" id="teamDays">0</div><div class="stat-note">个开黑日</div></div>
+    </section>
+    <section class="section" id="team">
+      <div class="section-head"><div><div class="section-kicker">THE SQUAD</div><h2>小队评分榜</h2><p class="section-desc">按平均评分排序；胜率和 MVP 数一起看，谁在扛事一目了然。</p></div><span class="subtle" id="memberCount">固定五人队</span></div>
+      <div class="two-col"><div id="rosterBoard" class="roster"></div><div><div class="section-head" style="margin-bottom:13px"><div><div class="section-kicker">SOME REAL TALK</div><h2 style="font-size:20px">一些中肯的评价</h2></div></div><div id="awards" class="awards"></div></div></div>
+    </section>
+
+    <section class="section"><div class="section-head"><div><div class="section-kicker">SQUAD PICKS</div><h2>小队英雄画像</h2><p class="section-desc">看看每个人最常出场、胜率最高和最低的英雄。</p></div></div><div id="squadHeroes"></div></section>
+<section class="section" id="history">
+      <div class="section-head"><div><div class="section-kicker">MATCH LOG</div><h2>年度战报</h2><p class="section-desc">按日期倒序回看每局结果、五位队友的英雄选择与评分。</p></div></div>
+      <div id="matchList" class="match-list"></div>
+    </section>
+  </main>
+  <footer class="footer"><span>❀❀应援会 · 2026 五排开黑日记</span><span id="dataFootnote">战绩快照载入中</span></footer>
+</div>
+<script>
+
+(function(){
+  const rosterFallback=["呜呀捉飞鸡","玩家大薄荷糖","积极向上的名","只求爱的人","Swiftie"];
+  const $=s=>document.querySelector(s);
+  const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const pct=(n,d)=>d?((n/d)*100).toFixed(1)+"%":"—";
+  const scoreFmt=n=>Number.isFinite(Number(n))?Number(n).toFixed(1):"—";
+  let roster=rosterFallback.slice(),matches=[];
+  function allEntries(){return matches.flatMap(m=>(m.players||[]).map(p=>Object.assign({date:m.date,result:m.result,mode:m.mode,matchId:m.id},p)))}
+  function safeDate(d){return d?new Date(d+"T12:00:00").toLocaleDateString("zh-CN",{month:"2-digit",day:"2-digit"}):"日期待补"}
+  function playerStats(){
+    const map=new Map(roster.map(name=>[name,{name,games:0,wins:0,score:0,scores:0,lossScore:0,lossScores:0,mvp:0,heroes:{},ratings:[]}]));
+    allEntries().forEach(p=>{
+      if(!map.has(p.name))map.set(p.name,{name:p.name,games:0,wins:0,score:0,scores:0,lossScore:0,lossScores:0,mvp:0,heroes:{},ratings:[]});
+      const s=map.get(p.name);s.games++;if(p.result==="win")s.wins++;
+      if(p.rating>0){const rating=Number(p.rating);s.score+=rating;s.scores++;s.ratings.push(rating);if(p.result==="loss"){s.lossScore+=rating;s.lossScores++}}
+      if(p.mvp)s.mvp++;
+      if(p.hero){if(!s.heroes[p.hero])s.heroes[p.hero]={hero:p.hero,uses:0,wins:0};const h=s.heroes[p.hero];h.uses++;if(p.result==="win")h.wins++}
+    });
+    return [...map.values()];
+  }
+  function average(s){return s.scores?s.score/s.scores:0}
+  function renderStats(){
+    const wins=matches.filter(m=>m.result==="win").length,ratings=allEntries().filter(p=>Number(p.rating)>0),avg=ratings.length?ratings.reduce((sum,p)=>sum+Number(p.rating),0)/ratings.length:0;
+    $("#matchCount").textContent=matches.length;$("#teamRate").textContent=pct(wins,matches.length);$("#winRecord").textContent="胜 "+wins+" · 负 "+(matches.length-wins);$("#teamScore").textContent=scoreFmt(avg);$("#teamDays").textContent=new Set(matches.map(m=>m.date).filter(Boolean)).size;
+    $("#memberCount").textContent=roster.join(" · ");
+  }
+  function renderRoster(){
+    const stats=playerStats().sort((a,b)=>average(b)-average(a)),top=Math.max(0,...stats.map(average));
+    $("#rosterBoard").innerHTML=stats.map((s,i)=>'<div class="roster-row"><div class="rank-no">#'+(i+1)+'</div><div><div class="member">'+esc(s.name)+'</div><div class="member-sub">'+s.games+' 局 · MVP '+s.mvp+' 次<div class="mini-bar"><i style="width:'+Math.min(100,top?average(s)/top*100:0)+'%"></i></div></div></div><div class="cell"><strong>'+scoreFmt(average(s))+'</strong><small>均分</small></div><div class="cell"><strong>'+pct(s.wins,s.games)+'</strong><small>胜率</small></div><div class="cell"><strong>'+s.mvp+'</strong><small>MVP</small></div></div>').join("");
+  }
+  function renderAwards(){
+    const stats=playerStats().filter(s=>s.games),best=stats.slice().sort((a,b)=>average(b)-average(a))[0],mvp=stats.slice().sort((a,b)=>b.mvp-a.mvp||average(b)-average(a))[0],hero=stats.slice().sort((a,b)=>Math.max(0,...Object.values(b.heroes).map(h=>h.uses))-Math.max(0,...Object.values(a.heroes).map(h=>h.uses)))[0],bold=stats.filter(s=>s.lossScores>0).sort((a,b)=>b.lossScore/b.lossScores-a.lossScore/a.lossScores)[0],versatile=stats.slice().sort((a,b)=>Object.keys(b.heroes).length-Object.keys(a.heroes).length)[0],roller=stats.filter(s=>s.ratings.length>1).sort((a,b)=>(Math.max(...b.ratings)-Math.min(...b.ratings))-(Math.max(...a.ratings)-Math.min(...a.ratings)))[0];
+    const items=[
+      ["♛","稳定输出奖",best?best.name:"—",best?"平均评分 "+scoreFmt(average(best))+"，全队最高":"暂无足够评分","gold"],
+      ["✦","MVP吸铁石",mvp?mvp.name:"—",mvp?mvp.mvp+" 次 MVP":"暂无 MVP 记录","mint"],
+      ["♡","本命专精奖",hero?hero.name:"—",hero?Math.max(...Object.values(hero.heroes).map(h=>h.uses))+" 局使用同一英雄":"暂无英雄记录","blue"],
+      ["☄","逆风扛事奖",bold?bold.name:"—",bold?"败局平均评分 "+scoreFmt(bold.lossScore/bold.lossScores):"暂无败局评分","pink"],
+      ["🧰","英雄池很忙奖",versatile?versatile.name:"—",versatile?Object.keys(versatile.heroes).length+" 位英雄轮番上场":"暂无英雄记录","blue"],
+      ["🎢","评分过山车奖",roller?roller.name:"—",roller?"单局评分从 "+scoreFmt(Math.min(...roller.ratings))+" 到 "+scoreFmt(Math.max(...roller.ratings)):"暂无评分波动数据","pink"]
+    ];
+    $("#awards").innerHTML=items.map(x=>'<div class="award '+x[4]+'"><div class="award-icon">'+x[0]+'</div><div class="award-title">'+x[1]+'</div><div class="award-winner">'+esc(x[2])+'</div><div class="award-note">'+esc(x[3])+'</div></div>').join("");
+  }
+  function renderSquadHeroes(){
+    const byPlayer=new Map(roster.map(name=>[name,{}]));
+    allEntries().forEach(p=>{if(!p.hero)return;if(!byPlayer.has(p.name))byPlayer.set(p.name,{});const byHero=byPlayer.get(p.name);if(!byHero[p.hero])byHero[p.hero]={hero:p.hero,uses:0,wins:0};byHero[p.hero].uses++;if(p.result==="win")byHero[p.hero].wins++});
+    const cards=roster.map(name=>{
+      const heroes=Object.values(byPlayer.get(name)||{}),rate=h=>h.uses?h.wins/h.uses:0;
+      const most=heroes.slice().sort((a,b)=>b.uses-a.uses||rate(b)-rate(a)||a.hero.localeCompare(b.hero))[0];
+      const highest=heroes.slice().sort((a,b)=>rate(b)-rate(a)||b.uses-a.uses||a.hero.localeCompare(b.hero))[0];
+      const lowest=heroes.slice().sort((a,b)=>rate(a)-rate(b)||b.uses-a.uses||a.hero.localeCompare(b.hero))[0];
+      const item=(label,h)=>'<div class="hero-highlight"><span>'+label+'</span><strong>'+esc(h?h.hero:"暂无记录")+'</strong><small>'+ (h?h.uses+" 局 · 胜率 "+pct(h.wins,h.uses):"等待战绩")+'</small></div>';
+      return '<article class="squad-hero-card"><h3>'+esc(name)+'</h3>'+item("使用次数最多",most)+item("胜率最高",highest)+item("胜率最低",lowest)+'</article>';
+    }).join("");
+    $("#squadHeroes").innerHTML='<div class="squad-hero-grid">'+cards+'</div>';
+  }
+  function renderMatches(){
+    const list=matches.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+    $("#matchList").innerHTML=list.map(m=>{
+      const players=(m.players||[]).map(p=>'<div class="match-pick"><strong>'+esc(p.name)+'</strong><span>'+esc(p.hero||"英雄待补")+'</span><small>'+(Number(p.rating)>0?"评分 "+scoreFmt(p.rating):"未评分")+(p.mvp?" · MVP":"")+'</small></div>').join("");
+      const mvp=(m.players||[]).find(p=>p.mvp),note=mvp?"MVP："+mvp.name:(m.result==="win"?"这局拿下，默契+1":"下把再找回来");
+      return '<div class="match"><div class="match-date">'+safeDate(m.date)+'<small>'+esc(m.mode||"排位")+'</small></div><div class="result '+(m.result==="win"?"win":"loss")+'">'+(m.result==="win"?"胜利":"失利")+'</div><div class="match-content"><div class="match-picks">'+players+'</div><div class="match-note">'+esc(note)+'</div></div></div>';
+    }).join("");
+    if(!list.length)$("#matchList").innerHTML='<div class="empty"><b>战报正在准备中</b>请稍后重新载入页面。</div>';
+  }
+  function render(){renderStats();renderRoster();renderAwards();renderSquadHeroes();renderMatches()}
+  async function init(){
+    try{
+      const response=await fetch("data/yearbook-2026.json",{cache:"no-store"});
+      if(!response.ok)throw new Error("无法载入战绩快照");
+      const data=await response.json();
+      matches=Array.isArray(data.matches)?data.matches:[];
+      roster=Array.isArray(data.roster)&&data.roster.length?data.roster:rosterFallback.slice();
+      const updated=data.refreshedAt?new Date(data.refreshedAt):new Date();
+      const updateLabel=updated.toLocaleDateString("zh-CN",{year:"numeric",month:"2-digit",day:"2-digit"});
+      $("#campSource").innerHTML='<i class="dot"></i>战绩快照 · '+esc(updateLabel);
+      $("#dataFootnote").textContent="数据来自王者营地历史战报与近期五排评分 · 更新于 "+updateLabel;
+      render();
+    }catch(error){
+      $("#campSource").textContent="战绩暂不可用";
+      $("#dataFootnote").textContent="数据快照暂不可用，请稍后重试。";
+      $("#matchList").innerHTML='<div class="empty"><b>战绩快照暂不可用</b>请稍后刷新页面。</div>';
+    }
+  }
+  init();
+})();
+
+</script>
+</body>
+</html>
+
