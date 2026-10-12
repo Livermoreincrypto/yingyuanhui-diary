@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: yingyuanhui-yearbook-admin
+    runtime: node
+    plan: starter
+    rootDir: camp-dashboard
+    buildCommand: npm install && npx prisma generate && npx next build
+    startCommand: npx prisma db push && npm start
+    healthCheckPath: /
+    disk:
+      name: yearbook-admin-data
+      mountPath: /opt/render/project/src/camp-dashboard/data
+      sizeGB: 1
+    envVars:
+      - key: DATABASE_URL
+        value: file:/opt/render/project/src/camp-dashboard/data/players.db
+      - key: WZRY_API_PROVIDER
+        value: camp
+      - key: AUTO_SYNC_ENABLED
+        value: "false"
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_SECRET
+        generateValue: true
+      - key: YEARBOOK_GITHUB_TOKEN
+        sync: false
+      - key: YEARBOOK_GITHUB_REPO
+        value: RabbitmanWMQ/yingyuanhui-diary
+      - key: YEARBOOK_GITHUB_FILE
+        value: data/yearbook-2026.json
+      - key: YEARBOOK_GITHUB_BRANCH
+        value: main
+      - key: YEARBOOK_ROSTER
+        value: "呜呀捉飞鸡|玩家大薄荷糖|积极向上的名|只求爱的人|Swiftie"
+      - key: QQ_LOGIN_RELAY_BASE_URL
+        sync: false
