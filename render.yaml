@@ -2,15 +2,12 @@ services:
   - type: web
     name: yingyuanhui-yearbook-admin
     runtime: node
-    plan: starter
+    plan: free
+    region: singapore
     rootDir: camp-dashboard
-    buildCommand: npm install && npx prisma generate && npx next build
-    startCommand: npx prisma db push && npm start
+    buildCommand: npm ci && npx prisma generate && npx next build
+    startCommand: mkdir -p data && npx prisma db push && npm start
     healthCheckPath: /
-    disk:
-      name: yearbook-admin-data
-      mountPath: /opt/render/project/src/camp-dashboard/data
-      sizeGB: 1
     envVars:
       - key: DATABASE_URL
         value: file:/opt/render/project/src/camp-dashboard/data/players.db
