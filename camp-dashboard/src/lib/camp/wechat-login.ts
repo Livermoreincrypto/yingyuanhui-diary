@@ -74,7 +74,7 @@ function sha1(input: string) {
   return crypto.createHash("sha1").update(input).digest("hex");
 }
 
-function decodeEncodeRes(encodeRes: string, publicKey = DEFAULT_PUBLIC_KEY) {
+export function decodeEncodeRes(encodeRes: string, publicKey = DEFAULT_PUBLIC_KEY) {
   if (!encodeRes) return null;
   try {
     const decrypted = crypto.publicDecrypt(
@@ -90,7 +90,7 @@ function decodeEncodeRes(encodeRes: string, publicKey = DEFAULT_PUBLIC_KEY) {
   }
 }
 
-function buildSpecialEncodeParam(publicKey = DEFAULT_PUBLIC_KEY) {
+export function buildSpecialEncodeParam(publicKey = DEFAULT_PUBLIC_KEY) {
   const timestamp = Date.now();
   const nonce = `:${crypto.randomUUID().replace(/-/g, "")}:${timestamp}`;
   const deviceId = crypto.randomUUID().replace(/-/g, "");

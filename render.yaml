@@ -29,5 +29,3 @@ services:
         value: main
       - key: YEARBOOK_ROSTER
         value: "呜呀捉飞鸡|玩家大薄荷糖|积极向上的名|只求爱的人|Swiftie"
-      - key: QQ_LOGIN_RELAY_BASE_URL
-        sync: false

@@ -205,7 +205,7 @@ export default function AdminYearbookPage() {
         )}
         {!qr && qrStatus && <p className="text-sm text-[var(--muted)]">{qrStatus}</p>}
         <p className="text-xs leading-6 text-[var(--muted)]">
-          扫码授权会经过上方配置的中转服务并由其处理；登录态随后保存在本后台，不会写入公开年鉴仓库。只对你认可的 HTTPS 中转服务扫码。
+          二维码和授权流程由本后台服务器直接连接 QQ 与王者营地完成，不经过第三方扫码中转；营地登录态只保存在后台，不会写入公开年鉴。
         </p>
       </section>
 
