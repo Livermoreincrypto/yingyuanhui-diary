@@ -1,7 +1,7 @@
 import { after } from "next/server";
 import { z } from "zod";
 import { handleRouteError, jsonOk } from "@/lib/api";
-import { lookupPlayerByCampId, startPlayerSync } from "@/lib/player-service";
+import { lookupPlayerByCampId, startPlayerSync, type PendingPlayerSync } from "@/lib/player-service";
 import { getWzryApiClient } from "@/lib/wzry-api";
 import { isLocalYearbookRequest } from "@/lib/yearbook/local-only";
 
@@ -21,7 +21,7 @@ export async function POST(req: Request) {
   if (!isLocalYearbookRequest(req)) return Response.json({ ok: false, error: "仅允许本机访问" }, { status: 403 });
   try {
     const body = schema.parse(await req.json());
-    const pending = [];
+    const pending: PendingPlayerSync[] = [];
     const players = [];
     const resolvedCampIds = ["", "", "", "", ""];
     for (let slot = 0; slot < body.campIds.length; slot += 1) {
