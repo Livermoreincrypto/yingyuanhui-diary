@@ -5,7 +5,7 @@ services:
     plan: free
     region: singapore
     rootDir: camp-dashboard
-    buildCommand: npm ci && npx prisma generate && npx next build
+    buildCommand: npm install && npx prisma generate && npx next build
     startCommand: mkdir -p data && npx prisma db push && npm start
     healthCheckPath: /
     envVars:
