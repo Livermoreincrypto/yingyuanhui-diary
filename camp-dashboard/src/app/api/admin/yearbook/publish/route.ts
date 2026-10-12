@@ -21,7 +21,6 @@ export async function POST(req: Request) {
     const published = await publishYearbookData(data);
     return jsonOk({
       year,
-      fetchedMatchCount: data.matches.length,
       ...published,
     }, { headers: { "Cache-Control": "no-store" } });
   } catch (err) {
