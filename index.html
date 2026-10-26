@@ -74,6 +74,9 @@ h1{font-size:clamp(38px,5vw,62px);line-height:1.07;letter-spacing:-.055em;margin
   const rosterFallback=["呜呀捉飞鸡","玩家大薄荷糖","积极向上的名","只求爱的人","Swiftie"];
   const $=s=>document.querySelector(s);
   const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const REAL_NAMES={"积极向上的名":"王振强","输了你们无能":"王振强","你好绿绿":"王振强","玩家大薄荷糖":"刘健康","Swiftie":"王雪骅","呜呀捉飞鸡":"王明强","只求爱的人":"刘志伟"};
+  const displayName=value=>REAL_NAMES[String(value==null?"":value)]||String(value==null?"":value);
+  const displayText=value=>String(value==null?"":value).replace(/积极向上的名|输了你们无能|你好绿绿|玩家大薄荷糖|呜呀捉飞鸡|只求爱的人|Swiftie/g,name=>displayName(name));
   const pct=(n,d)=>d?((n/d)*100).toFixed(1)+"%":"—";
   const scoreFmt=n=>Number.isFinite(Number(n))?Number(n).toFixed(1):"—";
   let roster=rosterFallback.slice(),matches=[];
@@ -94,11 +97,11 @@ h1{font-size:clamp(38px,5vw,62px);line-height:1.07;letter-spacing:-.055em;margin
   function renderStats(){
     const wins=matches.filter(m=>m.result==="win").length,ratings=allEntries().filter(p=>Number(p.rating)>0),avg=ratings.length?ratings.reduce((sum,p)=>sum+Number(p.rating),0)/ratings.length:0;
     $("#matchCount").textContent=matches.length;$("#teamRate").textContent=pct(wins,matches.length);$("#winRecord").textContent="胜 "+wins+" · 负 "+(matches.length-wins);$("#teamScore").textContent=scoreFmt(avg);$("#teamDays").textContent=new Set(matches.map(m=>m.date).filter(Boolean)).size;
-    $("#memberCount").textContent=roster.join(" · ");
+    $("#memberCount").textContent=roster.map(displayName).join(" · ");
   }
   function renderRoster(){
     const stats=playerStats().sort((a,b)=>average(b)-average(a)),top=Math.max(0,...stats.map(average));
-    $("#rosterBoard").innerHTML=stats.map((s,i)=>'<div class="roster-row"><div class="rank-no">#'+(i+1)+'</div><div><div class="member">'+esc(s.name)+'</div><div class="member-sub">'+s.games+' 局 · MVP '+s.mvp+' 次<div class="mini-bar"><i style="width:'+Math.min(100,top?average(s)/top*100:0)+'%"></i></div></div></div><div class="cell"><strong>'+scoreFmt(average(s))+'</strong><small>均分</small></div><div class="cell"><strong>'+s.mvp+'</strong><small>MVP</small></div></div>').join("");
+    $("#rosterBoard").innerHTML=stats.map((s,i)=>'<div class="roster-row"><div class="rank-no">#'+(i+1)+'</div><div><div class="member">'+esc(displayName(s.name))+'</div><div class="member-sub">'+s.games+' 局 · MVP '+s.mvp+' 次<div class="mini-bar"><i style="width:'+Math.min(100,top?average(s)/top*100:0)+'%"></i></div></div></div><div class="cell"><strong>'+scoreFmt(average(s))+'</strong><small>均分</small></div><div class="cell"><strong>'+s.mvp+'</strong><small>MVP</small></div></div>').join("");
   }
   function renderAwards(){
     const stats=playerStats().filter(s=>s.games),best=stats.slice().sort((a,b)=>average(b)-average(a))[0],mvp=stats.slice().sort((a,b)=>b.mvp-a.mvp||average(b)-average(a))[0],hero=stats.slice().sort((a,b)=>Math.max(0,...Object.values(b.heroes).map(h=>h.uses))-Math.max(0,...Object.values(a.heroes).map(h=>h.uses)))[0],bold=stats.filter(s=>s.lossScores>0).sort((a,b)=>b.lossScore/b.lossScores-a.lossScore/a.lossScores)[0],versatile=stats.slice().sort((a,b)=>Object.keys(b.heroes).length-Object.keys(a.heroes).length)[0],roller=stats.filter(s=>s.ratings.length>1).sort((a,b)=>(Math.max(...b.ratings)-Math.min(...b.ratings))-(Math.max(...a.ratings)-Math.min(...a.ratings)))[0];
@@ -110,7 +113,7 @@ h1{font-size:clamp(38px,5vw,62px);line-height:1.07;letter-spacing:-.055em;margin
       ["🧰","英雄池很忙奖",versatile?versatile.name:"—",versatile?Object.keys(versatile.heroes).length+" 位英雄轮番上场":"暂无英雄记录","blue"],
       ["🎢","评分过山车奖",roller?roller.name:"—",roller?"单局评分从 "+scoreFmt(Math.min(...roller.ratings))+" 到 "+scoreFmt(Math.max(...roller.ratings)):"暂无评分波动数据","pink"]
     ];
-    $("#awards").innerHTML=items.map(x=>'<div class="award '+x[4]+'"><div class="award-icon">'+x[0]+'</div><div class="award-title">'+x[1]+'</div><div class="award-winner">'+esc(x[2])+'</div><div class="award-note">'+esc(x[3])+'</div></div>').join("");
+    $("#awards").innerHTML=items.map(x=>'<div class="award '+x[4]+'"><div class="award-icon">'+x[0]+'</div><div class="award-title">'+x[1]+'</div><div class="award-winner">'+esc(displayName(x[2]))+'</div><div class="award-note">'+esc(displayText(x[3]))+'</div></div>').join("");
   }
   function renderSquadHeroes(){
     const byPlayer=new Map(roster.map(name=>[name,{}]));
@@ -121,16 +124,16 @@ h1{font-size:clamp(38px,5vw,62px);line-height:1.07;letter-spacing:-.055em;margin
       const highest=heroes.slice().sort((a,b)=>rate(b)-rate(a)||b.uses-a.uses||a.hero.localeCompare(b.hero))[0];
       const lowest=heroes.slice().sort((a,b)=>rate(a)-rate(b)||b.uses-a.uses||a.hero.localeCompare(b.hero))[0];
       const item=(label,h)=>'<div class="hero-highlight"><span>'+label+'</span><strong>'+esc(h?h.hero:"暂无记录")+'</strong><small>'+ (h?h.uses+" 局 · 胜率 "+pct(h.wins,h.uses):"等待战绩")+'</small></div>';
-      return '<article class="squad-hero-card"><h3>'+esc(name)+'</h3>'+item("使用次数最多",most)+item("胜率最高",highest)+item("胜率最低",lowest)+'</article>';
+      return '<article class="squad-hero-card"><h3>'+esc(displayName(name))+'</h3>'+item("使用次数最多",most)+item("胜率最高",highest)+item("胜率最低",lowest)+'</article>';
     }).join("");
     $("#squadHeroes").innerHTML='<div class="squad-hero-grid">'+cards+'</div>';
   }
   function renderMatches(){
     const list=matches.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||""));
     $("#matchList").innerHTML=list.map(m=>{
-      const players=(m.players||[]).map(p=>'<div class="match-pick"><strong>'+esc(p.name)+'</strong>'+(p.accountName&&p.accountName!==p.name?'<em class="match-account">本局：'+esc(p.accountName)+'</em>':'')+'<span>'+esc(p.hero||"英雄待补")+'</span><small>'+(Number(p.rating)>0?"评分 "+scoreFmt(p.rating):"未评分")+(p.mvp?" · MVP":"")+'</small></div>').join("");
+      const players=(m.players||[]).map(p=>'<div class="match-pick"><strong>'+esc(displayName(p.name))+'</strong>'+(p.accountName&&displayName(p.accountName)!==displayName(p.name)?'<em class="match-account">本局：'+esc(displayName(p.accountName))+'</em>':'')+'<span>'+esc(p.hero||"英雄待补")+'</span><small>'+(Number(p.rating)>0?"评分 "+scoreFmt(p.rating):"未评分")+(p.mvp?" · MVP":"")+'</small></div>').join("");
       const mvp=(m.players||[]).find(p=>p.mvp),note=(m.note&&m.source!=="camp"?m.note:"")||(mvp?"MVP："+mvp.name:(m.result==="win"?"这局拿下，默契+1":"下把再找回来"));
-      return '<div class="match"><div class="match-date">'+safeDate(m.date)+'<small>'+esc(m.mode||"排位")+'</small></div><div class="result '+(m.result==="win"?"win":"loss")+'">'+(m.result==="win"?"胜利":"失利")+'</div><div class="match-content"><div class="match-picks">'+players+'</div><div class="match-note">'+esc(note)+'</div></div></div>';
+      return '<div class="match"><div class="match-date">'+safeDate(m.date)+'<small>'+esc(m.mode||"排位")+'</small></div><div class="result '+(m.result==="win"?"win":"loss")+'">'+(m.result==="win"?"胜利":"失利")+'</div><div class="match-content"><div class="match-picks">'+players+'</div><div class="match-note">'+esc(displayText(note))+'</div></div></div>';
     }).join("");
     if(!list.length)$("#matchList").innerHTML='<div class="empty"><b>战报正在准备中</b>请稍后重新载入页面。</div>';
   }
