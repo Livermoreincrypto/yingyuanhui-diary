@@ -9,6 +9,9 @@ const DEFAULT_ROSTER = [
   "只求爱的人",
   "Swiftie",
 ];
+const DEFAULT_ROSTER_ALIASES: Record<string, string[]> = {
+  "积极向上的名": ["你好绿绿", "输了你们无能"],
+};
 const MODE_NAMES: Record<string, string> = {
   ranked: "排位",
   peak: "巅峰赛",
@@ -68,6 +71,25 @@ function getPublishConfig() {
   };
 }
 
+function rosterNicknameMap(roster: string[]) {
+  const names = new Map(roster.map((name) => [normalizeNickname(name), name]));
+  for (const [canonical, aliases] of Object.entries(DEFAULT_ROSTER_ALIASES)) {
+    const canonicalName = names.get(normalizeNickname(canonical));
+    if (!canonicalName) continue;
+    for (const alias of aliases) names.set(normalizeNickname(alias), canonicalName);
+  }
+
+  for (const entry of (process.env.YEARBOOK_ROSTER_ALIASES || "").split("|")) {
+    const [canonicalInput, aliasesInput] = entry.split("=");
+    const canonicalName = names.get(normalizeNickname(canonicalInput));
+    if (!canonicalName || !aliasesInput) continue;
+    for (const alias of aliasesInput.split(",").map((value) => value.trim()).filter(Boolean)) {
+      names.set(normalizeNickname(alias), canonicalName);
+    }
+  }
+  return names;
+}
+
 function githubContentUrl(repo: string, file: string, branch: string) {
   const encodedPath = file.split("/").map(encodeURIComponent).join("/");
   return `https://api.github.com/repos/${repo}/contents/${encodedPath}?ref=${encodeURIComponent(branch)}`;
@@ -94,6 +116,38 @@ function matchSignature(match: JsonRecord) {
   return [String(match.date || ""), String(match.result || ""), String(match.mode || ""), playerKey].join("~");
 }
 
+function clockMinutes(value: unknown) {
+  const match = String(value || "").match(/^(\d{1,2}):(\d{2})$/);
+  if (!match) return null;
+  const hours = Number(match[1]);
+  const minutes = Number(match[2]);
+  return hours < 24 && minutes < 60 ? hours * 60 + minutes : null;
+}
+
+function sameManualCampMatch(manual: JsonRecord, camp: JsonRecord) {
+  if (manual.source !== "manual" || camp.source !== "camp") return false;
+  if (
+    String(manual.date || "") !== String(camp.date || "") ||
+    String(manual.result || "") !== String(camp.result || "") ||
+    String(manual.mode || "") !== String(camp.mode || "")
+  ) return false;
+
+  const rosterKey = (match: JsonRecord) =>
+    (Array.isArray(match.players) ? match.players : [])
+      .map((item) => normalizeNickname(asObject(item)?.name))
+      .filter(Boolean)
+      .sort()
+      .join("|");
+  if (!rosterKey(manual) || rosterKey(manual) !== rosterKey(camp)) return false;
+
+  const manualStart = clockMinutes(manual.time);
+  const campEnd = clockMinutes(camp.time);
+  const duration = Number(manual.durationMinutes);
+  if (manualStart == null || campEnd == null || !Number.isFinite(duration) || duration <= 0) return false;
+  const difference = Math.abs(((manualStart + Math.round(duration)) % 1440) - campEnd);
+  return Math.min(difference, 1440 - difference) <= 1;
+}
+
 function mergeMatches(previous: unknown, latest: JsonRecord[]) {
   const byId = new Map<string, JsonRecord>();
   const withoutIdBySignature = new Map<string, JsonRecord>();
@@ -105,7 +159,26 @@ function mergeMatches(previous: unknown, latest: JsonRecord[]) {
       else withoutIdBySignature.set(matchSignature(match), match);
     }
   }
-  for (const match of latest) {
+  for (const incoming of latest) {
+    let match = incoming;
+    if (match.source === "camp") {
+      const manualDuplicates = [...byId.entries()].filter(([, previousMatch]) =>
+        sameManualCampMatch(previousMatch, match),
+      );
+      if (manualDuplicates.length) {
+        const manual = manualDuplicates[0][1];
+        match = {
+          ...match,
+          time: manual.time || match.time,
+          durationMinutes: match.durationMinutes ?? manual.durationMinutes,
+        };
+        for (const [id] of manualDuplicates) byId.delete(id);
+      }
+      for (const [signature, previousMatch] of withoutIdBySignature) {
+        if (sameManualCampMatch(previousMatch, match)) withoutIdBySignature.delete(signature);
+      }
+    }
+
     if (match.id) {
       withoutIdBySignature.delete(matchSignature(match));
       byId.set(String(match.id), match);
@@ -147,6 +220,7 @@ export async function buildYearbookData(year: number, campIdInput: string) {
       mode: true,
       modeName: true,
       result: true,
+      durationSec: true,
       rawJson: true,
     },
     orderBy: { playedAt: "desc" },
@@ -154,7 +228,7 @@ export async function buildYearbookData(year: number, campIdInput: string) {
   });
 
   const wanted = roster.map(normalizeNickname).sort();
-  const canonicalNames = new Map(roster.map((name) => [normalizeNickname(name), name]));
+  const canonicalNames = rosterNicknameMap(roster);
   const matches = rows.flatMap((row) => {
     if (!row.rawJson) return [];
     let raw: JsonRecord | null = null;
@@ -167,13 +241,34 @@ export async function buildYearbookData(year: number, campIdInput: string) {
     const names = team
       .map((member) => normalizeNickname(asObject(member)?.name))
       .filter(Boolean);
-    if (names.length !== 5 || new Set(names).size !== 5 || names.slice().sort().some((name, i) => name !== wanted[i])) {
+    const canonicalTeam = names.map((name) => canonicalNames.get(name)).filter(Boolean);
+    const normalizedCanonicalTeam = canonicalTeam.map(normalizeNickname).sort();
+    if (
+      names.length !== 5 ||
+      new Set(names).size !== 5 ||
+      canonicalTeam.length !== 5 ||
+      new Set(normalizedCanonicalTeam).size !== 5 ||
+      normalizedCanonicalTeam.some((name, i) => name !== wanted[i])
+    ) {
       return [];
     }
+
+    const durationSeconds = Number(row.durationSec);
+    const durationMinutes = Number.isFinite(durationSeconds) && durationSeconds > 0
+      ? Math.round(durationSeconds / 60)
+      : undefined;
+    const time = new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Asia/Shanghai",
+      hour: "2-digit",
+      minute: "2-digit",
+      hourCycle: "h23",
+    }).format(row.playedAt);
 
     return [{
       id: row.externalId,
       date: row.playedAt.toISOString().slice(0, 10),
+      time,
+      ...(durationMinutes ? { durationMinutes } : {}),
       result: row.result === "win" ? "win" : "loss",
       mode: row.modeName || MODE_NAMES[row.mode] || "排位",
       note: "营地对局详情核验五位队友同阵营",
