@@ -1,7 +1,7 @@
 {
   "year": 2026,
-  "refreshedAt": "2026-10-26T01:06:04.000Z",
-  "source": "王者营地历史战绩与五排截图手动补录",
+  "refreshedAt": "2026-10-26T02:47:01.629Z",
+  "source": "王者营地历史战绩自动同步",
   "roster": [
     "呜呀捉飞鸡",
     "玩家大薄荷糖",
@@ -11,386 +11,382 @@
   ],
   "matches": [
     {
-      "id": "manual-20261024-2336",
+      "id": "1792856004",
       "date": "2026-10-24",
       "time": "23:36",
       "durationMinutes": 19,
       "result": "loss",
       "mode": "排位赛 五排",
-      "note": "",
-      "source": "manual",
+      "note": "营地对局详情核验五位队友同阵营",
+      "source": "camp",
       "players": [
         {
           "name": "呜呀捉飞鸡",
-          "hero": "",
-          "role": "中路",
+          "hero": "墨子",
+          "role": "",
           "rating": 13.2,
           "mvp": true,
-          "kills": 3,
-          "deaths": 2,
-          "assists": 13
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "玩家大薄荷糖",
-          "hero": "",
+          "hero": "赵云",
           "role": "",
           "rating": 7.3,
           "mvp": false,
-          "kills": 5,
-          "deaths": 8,
-          "assists": 8
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "只求爱的人",
-          "hero": "",
+          "hero": "孙膑",
           "role": "",
           "rating": 8.6,
           "mvp": false,
-          "kills": 3,
-          "deaths": 4,
-          "assists": 12
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "Swiftie",
-          "hero": "",
+          "hero": "蚩奼",
           "role": "",
           "rating": 6.8,
           "mvp": false,
-          "kills": 4,
-          "deaths": 6,
-          "assists": 3
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "积极向上的名",
-          "hero": "",
+          "hero": "虞姬",
           "role": "",
           "rating": 7.5,
           "mvp": false,
-          "kills": 3,
-          "deaths": 8,
-          "assists": 7,
-          "accountName": "你好绿绿"
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         }
       ]
     },
     {
-      "id": "manual-20261024-2321",
+      "id": "1792855083",
       "date": "2026-10-24",
       "time": "23:21",
       "durationMinutes": 11,
       "result": "win",
       "mode": "排位赛 五排",
-      "note": "",
-      "source": "manual",
+      "note": "营地对局详情核验五位队友同阵营",
+      "source": "camp",
       "players": [
         {
           "name": "呜呀捉飞鸡",
-          "hero": "",
+          "hero": "妲己",
           "role": "",
           "rating": 8.3,
           "mvp": false,
-          "kills": 5,
-          "deaths": 3,
-          "assists": 6
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "玩家大薄荷糖",
-          "hero": "",
+          "hero": "云缨",
           "role": "",
           "rating": 8.5,
           "mvp": false,
-          "kills": 4,
-          "deaths": 1,
-          "assists": 8
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "只求爱的人",
-          "hero": "",
-          "role": "对抗路",
+          "hero": "夏侯惇",
+          "role": "",
           "rating": 10.7,
           "mvp": true,
-          "kills": 5,
-          "deaths": 3,
-          "assists": 4
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "Swiftie",
-          "hero": "",
+          "hero": "百里守约",
           "role": "",
           "rating": 7.7,
           "mvp": false,
-          "kills": 3,
-          "deaths": 1,
-          "assists": 5
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "积极向上的名",
-          "hero": "",
-          "role": "游走",
+          "hero": "墨子",
+          "role": "",
           "rating": 10.6,
           "mvp": false,
-          "kills": 2,
-          "deaths": 1,
-          "assists": 14,
-          "accountName": "你好绿绿"
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         }
       ]
     },
     {
-      "id": "manual-20261024-2300",
+      "id": "1792853869",
       "date": "2026-10-24",
       "time": "23:00",
       "durationMinutes": 16,
       "result": "win",
       "mode": "排位赛 五排",
-      "note": "",
-      "source": "manual",
+      "note": "营地对局详情核验五位队友同阵营",
+      "source": "camp",
       "players": [
         {
           "name": "呜呀捉飞鸡",
-          "hero": "",
-          "role": "游走",
+          "hero": "墨子",
+          "role": "",
           "rating": 11.5,
           "mvp": false,
-          "kills": 2,
-          "deaths": 1,
-          "assists": 18
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "玩家大薄荷糖",
-          "hero": "",
+          "hero": "韩信",
           "role": "",
           "rating": 9.7,
           "mvp": false,
-          "kills": 7,
-          "deaths": 3,
-          "assists": 11
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "只求爱的人",
-          "hero": "",
+          "hero": "元流之子(坦克)",
           "role": "",
           "rating": 6.1,
           "mvp": false,
-          "kills": 3,
-          "deaths": 4,
-          "assists": 2
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "Swiftie",
-          "hero": "",
-          "role": "中路",
+          "hero": "干将莫邪",
+          "role": "",
           "rating": 11.8,
           "mvp": false,
-          "kills": 6,
-          "deaths": 1,
-          "assists": 11
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "积极向上的名",
-          "hero": "",
-          "role": "发育路",
+          "hero": "百里守约",
+          "role": "",
           "rating": 12.1,
           "mvp": true,
-          "kills": 6,
-          "deaths": 2,
-          "assists": 12,
-          "accountName": "你好绿绿"
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         }
       ]
     },
     {
-      "id": "manual-20261024-2238",
+      "id": "1792852498",
       "date": "2026-10-24",
       "time": "22:38",
-      "durationMinutes": 18,
+      "durationMinutes": 19,
       "result": "loss",
       "mode": "排位赛 五排",
-      "note": "",
-      "source": "manual",
+      "note": "营地对局详情核验五位队友同阵营",
+      "source": "camp",
       "players": [
         {
           "name": "呜呀捉飞鸡",
-          "hero": "",
-          "role": "中路",
+          "hero": "干将莫邪",
+          "role": "",
           "rating": 10.9,
           "mvp": true,
-          "kills": 5,
-          "deaths": 5,
-          "assists": 4
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "玩家大薄荷糖",
-          "hero": "",
+          "hero": "项羽",
           "role": "",
           "rating": 8.9,
           "mvp": false,
-          "kills": 2,
-          "deaths": 4,
-          "assists": 6
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "只求爱的人",
-          "hero": "",
+          "hero": "曜",
           "role": "",
           "rating": 6.8,
           "mvp": false,
-          "kills": 4,
-          "deaths": 5,
-          "assists": 5
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "Swiftie",
-          "hero": "",
+          "hero": "元流之子(射手)",
           "role": "",
           "rating": 5.3,
           "mvp": false,
-          "kills": 3,
-          "deaths": 6,
-          "assists": 3
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "积极向上的名",
-          "hero": "",
+          "hero": "王昭君",
           "role": "",
           "rating": 6.8,
           "mvp": false,
-          "kills": 1,
-          "deaths": 7,
-          "assists": 8,
-          "accountName": "你好绿绿"
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         }
       ]
     },
     {
-      "id": "manual-20261024-2222",
+      "id": "1792851599",
       "date": "2026-10-24",
       "time": "22:22",
       "durationMinutes": 11,
       "result": "loss",
       "mode": "排位赛 五排",
-      "note": "",
-      "source": "manual",
+      "note": "营地对局详情核验五位队友同阵营",
+      "source": "camp",
       "players": [
         {
           "name": "呜呀捉飞鸡",
-          "hero": "",
+          "hero": "百里守约",
           "role": "",
           "rating": 5.9,
           "mvp": false,
-          "kills": 2,
-          "deaths": 5,
-          "assists": 4
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "玩家大薄荷糖",
-          "hero": "",
+          "hero": "云缨",
           "role": "",
           "rating": 6.5,
           "mvp": false,
-          "kills": 2,
-          "deaths": 4,
-          "assists": 7
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "只求爱的人",
-          "hero": "",
+          "hero": "元流之子(坦克)",
           "role": "",
           "rating": 6.1,
           "mvp": false,
-          "kills": 3,
-          "deaths": 4,
-          "assists": 2
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "Swiftie",
-          "hero": "",
+          "hero": "王维",
           "role": "",
           "rating": 5.1,
           "mvp": false,
-          "kills": 4,
-          "deaths": 5,
-          "assists": 1
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "积极向上的名",
-          "hero": "",
-          "role": "游走",
+          "hero": "墨子",
+          "role": "",
           "rating": 10.3,
           "mvp": true,
-          "kills": 3,
-          "deaths": 2,
-          "assists": 7,
-          "accountName": "你好绿绿"
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         }
       ]
     },
     {
-      "id": "manual-20261024-2204",
+      "id": "1792850448",
       "date": "2026-10-24",
       "time": "22:04",
       "durationMinutes": 15,
       "result": "win",
       "mode": "排位赛 五排",
-      "note": "",
-      "source": "manual",
+      "note": "营地对局详情核验五位队友同阵营",
+      "source": "camp",
       "players": [
         {
           "name": "呜呀捉飞鸡",
-          "hero": "",
-          "role": "游走",
+          "hero": "桑启",
+          "role": "",
           "rating": 9.6,
           "mvp": false,
-          "kills": 1,
-          "deaths": 5,
-          "assists": 23
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "玩家大薄荷糖",
-          "hero": "",
-          "role": "打野",
+          "hero": "云缨",
+          "role": "",
           "rating": 10.6,
           "mvp": false,
-          "kills": 7,
-          "deaths": 1,
-          "assists": 17
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "只求爱的人",
-          "hero": "",
+          "hero": "元流之子(坦克)",
           "role": "",
           "rating": 7.9,
           "mvp": false,
-          "kills": 2,
-          "deaths": 4,
-          "assists": 13
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "Swiftie",
-          "hero": "",
+          "hero": "王维",
           "role": "",
           "rating": 9.7,
           "mvp": false,
-          "kills": 7,
-          "deaths": 4,
-          "assists": 12
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         },
         {
           "name": "积极向上的名",
-          "hero": "",
-          "role": "发育路",
+          "hero": "狄仁杰",
+          "role": "",
           "rating": 13.8,
           "mvp": true,
-          "kills": 11,
-          "deaths": 1,
-          "assists": 12,
-          "accountName": "你好绿绿"
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0
         }
       ]
     },
     {
       "id": "1791473820",
       "date": "2026-10-08",
+      "time": "00:01",
+      "durationMinutes": 21,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -451,6 +447,8 @@
     {
       "id": "1791472719",
       "date": "2026-10-08",
+      "time": "23:36",
+      "durationMinutes": 14,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -511,6 +509,8 @@
     {
       "id": "1791471319",
       "date": "2026-10-08",
+      "time": "23:17",
+      "durationMinutes": 20,
       "result": "loss",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -571,6 +571,8 @@
     {
       "id": "1791470365",
       "date": "2026-10-08",
+      "time": "22:54",
+      "durationMinutes": 13,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -631,6 +633,8 @@
     {
       "id": "1791213904",
       "date": "2026-10-05",
+      "time": "23:41",
+      "durationMinutes": 13,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -691,6 +695,8 @@
     {
       "id": "1791212700",
       "date": "2026-10-05",
+      "time": "23:24",
+      "durationMinutes": 17,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -751,6 +757,8 @@
     {
       "id": "1791211580",
       "date": "2026-10-05",
+      "time": "23:04",
+      "durationMinutes": 15,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -811,6 +819,8 @@
     {
       "id": "1791210475",
       "date": "2026-10-05",
+      "time": "22:45",
+      "durationMinutes": 14,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -871,6 +881,8 @@
     {
       "id": "1791208977",
       "date": "2026-10-05",
+      "time": "22:27",
+      "durationMinutes": 21,
       "result": "loss",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -931,6 +943,8 @@
     {
       "id": "1791207148",
       "date": "2026-10-05",
+      "time": "22:02",
+      "durationMinutes": 27,
       "result": "loss",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -991,6 +1005,8 @@
     {
       "id": "1791206166",
       "date": "2026-10-05",
+      "time": "21:31",
+      "durationMinutes": 13,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1051,6 +1067,8 @@
     {
       "id": "1791204939",
       "date": "2026-10-05",
+      "time": "21:15",
+      "durationMinutes": 17,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1111,6 +1129,8 @@
     {
       "id": "1791203618",
       "date": "2026-10-05",
+      "time": "20:54",
+      "durationMinutes": 18,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1171,6 +1191,8 @@
     {
       "id": "1791202608",
       "date": "2026-10-05",
+      "time": "20:32",
+      "durationMinutes": 13,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1231,6 +1253,8 @@
     {
       "id": "1791201467",
       "date": "2026-10-05",
+      "time": "20:15",
+      "durationMinutes": 15,
       "result": "loss",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1291,6 +1315,8 @@
     {
       "id": "1791126783",
       "date": "2026-10-04",
+      "time": "23:27",
+      "durationMinutes": 11,
       "result": "loss",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1351,6 +1377,8 @@
     {
       "id": "1791125655",
       "date": "2026-10-04",
+      "time": "23:12",
+      "durationMinutes": 15,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1411,6 +1439,8 @@
     {
       "id": "1791124404",
       "date": "2026-10-04",
+      "time": "22:53",
+      "durationMinutes": 17,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1471,6 +1501,8 @@
     {
       "id": "1791123054",
       "date": "2026-10-04",
+      "time": "22:32",
+      "durationMinutes": 19,
       "result": "loss",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1531,6 +1563,8 @@
     {
       "id": "1791121794",
       "date": "2026-10-04",
+      "time": "22:09",
+      "durationMinutes": 16,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1591,6 +1625,8 @@
     {
       "id": "1791120853",
       "date": "2026-10-04",
+      "time": "21:49",
+      "durationMinutes": 12,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1651,6 +1687,8 @@
     {
       "id": "1791118860",
       "date": "2026-10-04",
+      "time": "21:33",
+      "durationMinutes": 29,
       "result": "loss",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1711,6 +1749,8 @@
     {
       "id": "1791117918",
       "date": "2026-10-04",
+      "time": "21:00",
+      "durationMinutes": 12,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
@@ -1771,6 +1811,8 @@
     {
       "id": "1791116875",
       "date": "2026-10-04",
+      "time": "20:44",
+      "durationMinutes": 13,
       "result": "win",
       "mode": "排位赛 五排",
       "note": "营地对局详情核验五位队友同阵营",
