@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { type FormEvent, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { apiFetch } from "@/lib/client-fetch";
@@ -20,6 +20,42 @@ type Published = {
   pageUrl: string;
 };
 
+type ManualPlayer = {
+  name: string;
+  accountName: string;
+  hero: string;
+  role: string;
+  rating: string;
+  mvp: boolean;
+};
+
+type ManualForm = {
+  date: string;
+  result: "win" | "loss";
+  mode: string;
+  note: string;
+  players: ManualPlayer[];
+};
+
+type ManualPublished = {
+  year: number;
+  matchCount: number;
+  commitUrl?: string | null;
+  pageUrl: string;
+};
+
+const YEARBOOK_ROSTER = ["呜呀捉飞鸡", "玩家大薄荷糖", "积极向上的名", "只求爱的人", "Swiftie"];
+const PLAYER_ROLES = ["对抗路", "打野", "中路", "发育路", "游走"];
+
+function todayForInput() {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+}
+
+function emptyManualPlayers(): ManualPlayer[] {
+  return YEARBOOK_ROSTER.map((name) => ({ name, accountName: "", hero: "", role: "", rating: "", mvp: false }));
+}
+
 export default function AdminYearbookPage() {
   const router = useRouter();
   const [ready, setReady] = useState(false);
@@ -32,6 +68,17 @@ export default function AdminYearbookPage() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [published, setPublished] = useState<Published | null>(null);
+  const [manualForm, setManualForm] = useState<ManualForm>(() => ({
+    date: todayForInput(),
+    result: "win",
+    mode: "排位赛 五排",
+    note: "",
+    players: emptyManualPlayers(),
+  }));
+  const [savingManual, setSavingManual] = useState(false);
+  const [manualMessage, setManualMessage] = useState("");
+  const [manualError, setManualError] = useState("");
+  const [manualPublished, setManualPublished] = useState<ManualPublished | null>(null);
 
   useEffect(() => {
     apiFetch("/api/admin/auth", { cache: "no-store" })
@@ -152,6 +199,63 @@ export default function AdminYearbookPage() {
     }
   }
 
+  function updateManualPlayer(index: number, patch: Partial<ManualPlayer>) {
+    setManualForm((current) => ({
+      ...current,
+      players: current.players.map((player, playerIndex) => playerIndex === index ? { ...player, ...patch } : player),
+    }));
+  }
+
+  async function saveManualMatch(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setSavingManual(true);
+    setManualError("");
+    setManualMessage("正在保存并发布这一局…");
+    setManualPublished(null);
+    try {
+      const response = await apiFetch("/api/admin/yearbook/manual", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          date: manualForm.date,
+          result: manualForm.result,
+          mode: manualForm.mode,
+          note: manualForm.note,
+          players: manualForm.players.map((player) => ({
+            name: player.name,
+            accountName: player.accountName,
+            hero: player.hero,
+            role: player.role,
+            rating: player.rating === "" ? 0 : Number(player.rating),
+            mvp: player.mvp,
+          })),
+        }),
+      });
+      const json = await response.json();
+      if (response.status === 401) {
+        router.replace("/admin/login");
+        return;
+      }
+      if (!json.ok) {
+        setManualError(json.error || "保存失败，请检查填写内容后重试");
+        setManualMessage("");
+        return;
+      }
+      setManualPublished(json.data);
+      setManualMessage(`已记入 2026 年鉴，目前公开展示 ${json.data.matchCount} 场。GitHub Pages 通常需要片刻刷新。`);
+      setManualForm((current) => ({
+        ...current,
+        note: "",
+        players: current.players.map((player) => ({ ...player, accountName: "", hero: "", role: "", rating: "", mvp: false })),
+      }));
+    } catch {
+      setManualError("网络错误；请打开公开年鉴确认是否已保存，再决定是否重新提交");
+      setManualMessage("");
+    } finally {
+      setSavingManual(false);
+    }
+  }
+
   if (!ready) return <div className="p-8 text-center text-[var(--muted)]">校验登录…</div>;
 
   return (
@@ -230,6 +334,145 @@ export default function AdminYearbookPage() {
           </div>
         )}
       </section>
+
+      <section className="panel space-y-4 p-4">
+        <div>
+          <h2 className="text-lg font-medium text-[var(--gold-bright)]">3. 记一局（手动补录）</h2>
+          <p className="mt-1 text-sm leading-6 text-[var(--muted)]">
+            适合有人用了小号、营地记录无法匹配的对局。队友按固定小队成员统计；只需给用小号的队友填写“本局使用名”。保存后会直接更新公开年鉴，不需要重新扫码。
+          </p>
+        </div>
+
+        <form className="space-y-4" onSubmit={saveManualMatch}>
+          <div className="grid gap-3 sm:grid-cols-3">
+            <label className="block text-sm text-[var(--muted)]">
+              日期
+              <input
+                className="mt-2 w-full rounded-xl border border-[var(--line)] bg-[var(--surface)] px-3 py-2 text-[var(--text)] outline-none focus:border-[var(--gold-bright)]"
+                type="date"
+                min="2026-01-01"
+                max="2026-12-31"
+                required
+                value={manualForm.date}
+                onChange={(event) => setManualForm((current) => ({ ...current, date: event.currentTarget.value }))}
+              />
+            </label>
+            <label className="block text-sm text-[var(--muted)]">
+              结果
+              <select
+                className="mt-2 w-full rounded-xl border border-[var(--line)] bg-[var(--surface)] px-3 py-2 text-[var(--text)] outline-none focus:border-[var(--gold-bright)]"
+                value={manualForm.result}
+                onChange={(event) => setManualForm((current) => ({ ...current, result: event.currentTarget.value as "win" | "loss" }))}
+              >
+                <option value="win">胜利</option>
+                <option value="loss">失败</option>
+              </select>
+            </label>
+            <label className="block text-sm text-[var(--muted)]">
+              模式
+              <select
+                className="mt-2 w-full rounded-xl border border-[var(--line)] bg-[var(--surface)] px-3 py-2 text-[var(--text)] outline-none focus:border-[var(--gold-bright)]"
+                value={manualForm.mode}
+                onChange={(event) => setManualForm((current) => ({ ...current, mode: event.currentTarget.value }))}
+              >
+                <option>排位赛 五排</option>
+                <option>排位赛</option>
+                <option>匹配</option>
+                <option>娱乐</option>
+              </select>
+            </label>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            {manualForm.players.map((player, index) => (
+              <div className="rounded-xl border border-[var(--line)] bg-[var(--surface)]/50 p-3" key={player.name}>
+                <h3 className="mb-3 font-medium text-[var(--text)]">{player.name}</h3>
+                <div className="space-y-3">
+                  <label className="block text-xs text-[var(--muted)]">
+                    本局使用名（选填，小号时填写）
+                    <input
+                      className="mt-1.5 w-full rounded-lg border border-[var(--line)] bg-[var(--surface)] px-3 py-2 text-sm text-[var(--text)] outline-none focus:border-[var(--gold-bright)]"
+                      maxLength={40}
+                      placeholder={`默认按 ${player.name} 统计`}
+                      value={player.accountName}
+                      onChange={(event) => updateManualPlayer(index, { accountName: event.currentTarget.value })}
+                    />
+                  </label>
+                  <div className="grid grid-cols-2 gap-2">
+                    <label className="block text-xs text-[var(--muted)]">
+                      英雄
+                      <input
+                        className="mt-1.5 w-full rounded-lg border border-[var(--line)] bg-[var(--surface)] px-3 py-2 text-sm text-[var(--text)] outline-none focus:border-[var(--gold-bright)]"
+                        maxLength={40}
+                        placeholder="选填"
+                        value={player.hero}
+                        onChange={(event) => updateManualPlayer(index, { hero: event.currentTarget.value })}
+                      />
+                    </label>
+                    <label className="block text-xs text-[var(--muted)]">
+                      位置
+                      <select
+                        className="mt-1.5 w-full rounded-lg border border-[var(--line)] bg-[var(--surface)] px-3 py-2 text-sm text-[var(--text)] outline-none focus:border-[var(--gold-bright)]"
+                        value={player.role}
+                        onChange={(event) => updateManualPlayer(index, { role: event.currentTarget.value })}
+                      >
+                        <option value="">选填</option>
+                        {PLAYER_ROLES.map((role) => <option key={role}>{role}</option>)}
+                      </select>
+                    </label>
+                    <label className="block text-xs text-[var(--muted)]">
+                      评分
+                      <input
+                        className="mt-1.5 w-full rounded-lg border border-[var(--line)] bg-[var(--surface)] px-3 py-2 text-sm text-[var(--text)] outline-none focus:border-[var(--gold-bright)]"
+                        type="number"
+                        min="0"
+                        max="20"
+                        step="0.1"
+                        placeholder="选填"
+                        value={player.rating}
+                        onChange={(event) => updateManualPlayer(index, { rating: event.currentTarget.value })}
+                      />
+                    </label>
+                    <label className="flex items-end gap-2 pb-2 text-sm text-[var(--muted)]">
+                      <input
+                        className="accent-[var(--gold-bright)]"
+                        type="checkbox"
+                        checked={player.mvp}
+                        onChange={(event) => updateManualPlayer(index, { mvp: event.currentTarget.checked })}
+                      />
+                      本局 MVP
+                    </label>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <label className="block text-sm text-[var(--muted)]">
+            本局趣事（选填）
+            <input
+              className="mt-2 w-full rounded-xl border border-[var(--line)] bg-[var(--surface)] px-3 py-2 text-[var(--text)] outline-none focus:border-[var(--gold-bright)]"
+              maxLength={120}
+              placeholder="比如：某人用小号也没逃过 MVP"
+              value={manualForm.note}
+              onChange={(event) => setManualForm((current) => ({ ...current, note: event.currentTarget.value }))}
+            />
+          </label>
+
+          <button className="btn btn-primary" type="submit" disabled={savingManual}>
+            {savingManual ? "正在保存…" : "保存并更新公开年鉴"}
+          </button>
+          {manualMessage && <p className="text-sm text-[var(--mint)]">{manualMessage}</p>}
+          {manualError && <p className="text-sm text-[var(--crimson)]">{manualError}</p>}
+          {manualPublished && (
+            <div className="flex flex-wrap gap-3 text-sm">
+              <a className="text-[var(--gold-bright)] underline underline-offset-4" href={manualPublished.pageUrl} target="_blank" rel="noreferrer">打开公开年鉴</a>
+              {manualPublished.commitUrl && <a className="text-[var(--gold-bright)] underline underline-offset-4" href={manualPublished.commitUrl} target="_blank" rel="noreferrer">查看更新记录</a>}
+            </div>
+          )}
+        </form>
+      </section>
     </div>
   );
 }
+

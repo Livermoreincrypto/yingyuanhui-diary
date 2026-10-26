@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/db";
 import { lookupPlayerByCampId, startPlayerSync } from "@/lib/player-service";
+import { randomUUID } from "node:crypto";
 
 const DEFAULT_ROSTER = [
   "呜呀捉飞鸡",
@@ -269,3 +270,115 @@ export async function publishYearbookData(data: Awaited<ReturnType<typeof buildY
     pageUrl: `https://${repo.split("/")[0].toLowerCase()}.github.io/${repo.split("/")[1]}/?name=diary`,
   };
 }
+
+type ManualYearbookMatchInput = {
+  date: string;
+  result: "win" | "loss";
+  mode: string;
+  note?: string;
+  players: Array<{
+    name: string;
+    accountName?: string;
+    hero?: string;
+    role?: string;
+    rating: number;
+    mvp: boolean;
+  }>;
+};
+
+/** Append one admin-entered match while keeping its stats attributed to the fixed roster. */
+export async function appendManualYearbookMatch(input: ManualYearbookMatchInput) {
+  const { token, repo, file, branch, roster } = getPublishConfig();
+  const rosterByNickname = new Map(roster.map((name) => [normalizeNickname(name), name]));
+  const normalizedPlayers = input.players.map((player) => {
+    const canonicalName = rosterByNickname.get(normalizeNickname(player.name));
+    if (!canonicalName) throw publishError("队友名单与年鉴固定小队不一致，请刷新后台后重试", 400);
+    const accountName = String(player.accountName || "").trim();
+    return {
+      name: canonicalName,
+      ...(accountName && normalizeNickname(accountName) !== normalizeNickname(canonicalName) ? { accountName } : {}),
+      hero: String(player.hero || "").trim(),
+      role: String(player.role || "").trim(),
+      rating: Number(player.rating || 0),
+      mvp: Boolean(player.mvp),
+      kills: 0,
+      deaths: 0,
+      assists: 0,
+    };
+  });
+  if (normalizedPlayers.length !== 5 || new Set(normalizedPlayers.map((player) => normalizeNickname(player.name))).size !== 5) {
+    throw publishError("一局需要五位不同的固定队友各录入一次", 400);
+  }
+
+  const now = new Date().toISOString();
+  const match: JsonRecord = {
+    id: `manual-${randomUUID()}`,
+    date: input.date,
+    result: input.result,
+    mode: input.mode.trim(),
+    note: String(input.note || "").trim(),
+    source: "manual",
+    players: normalizedPlayers,
+  };
+  const url = githubContentUrl(repo, file, branch);
+  const getResponse = await fetch(url, {
+    headers: githubHeaders(token),
+    cache: "no-store",
+    signal: AbortSignal.timeout(20_000),
+  });
+
+  let sha: string | undefined;
+  let previous: JsonRecord = {};
+  if (getResponse.ok) {
+    const remote = asObject(await getResponse.json());
+    sha = typeof remote?.sha === "string" ? remote.sha : undefined;
+    const encoded = typeof remote?.content === "string" ? remote.content.replace(/\s/g, "") : "";
+    if (encoded) {
+      try {
+        previous = asObject(JSON.parse(Buffer.from(encoded, "base64").toString("utf8"))) || {};
+      } catch {
+        throw publishError("GitHub 上的年鉴 JSON 无法解析，手动战绩未写入", 409);
+      }
+    }
+  } else if (getResponse.status !== 404) {
+    throw publishError(`读取 GitHub 年鉴失败（HTTP ${getResponse.status}），请检查仓库权限和路径`);
+  }
+
+  const matches = mergeMatches(previous.matches, [match]);
+  const merged = {
+    ...previous,
+    year: 2026,
+    refreshedAt: now,
+    source: previous.source || "王者营地历史战绩与后台手动补录",
+    roster,
+    matches,
+  };
+  const putResponse = await fetch(url.split("?")[0], {
+    method: "PUT",
+    headers: githubHeaders(token),
+    cache: "no-store",
+    signal: AbortSignal.timeout(20_000),
+    body: JSON.stringify({
+      message: "Add manual match to 2026 yearbook",
+      content: Buffer.from(`${JSON.stringify(merged, null, 2)}\n`, "utf8").toString("base64"),
+      branch,
+      ...(sha ? { sha } : {}),
+    }),
+  });
+
+  const result = asObject(await putResponse.json().catch(() => null));
+  if (!putResponse.ok) {
+    const detail = putResponse.status === 409 || putResponse.status === 422
+      ? "年鉴文件刚被其他更新修改，请刷新后台后重新提交"
+      : `GitHub 写入失败（HTTP ${putResponse.status}），请检查访问令牌权限`;
+    throw publishError(detail, putResponse.status === 409 || putResponse.status === 422 ? 409 : 502);
+  }
+
+  return {
+    year: 2026,
+    matchCount: matches.length,
+    commitUrl: asObject(result?.commit)?.html_url || null,
+    pageUrl: `https://${repo.split("/")[0].toLowerCase()}.github.io/${repo.split("/")[1]}/?name=diary`,
+  };
+}
+
