@@ -1,7 +1,7 @@
 {
   "year": 2026,
-  "refreshedAt": "2026-10-12T03:33:20.324Z",
-  "source": "王者营地历史战绩自动同步",
+  "refreshedAt": "2026-10-26T01:06:04.000Z",
+  "source": "王者营地历史战绩与五排截图手动补录",
   "roster": [
     "呜呀捉飞鸡",
     "玩家大薄荷糖",
@@ -10,6 +10,384 @@
     "Swiftie"
   ],
   "matches": [
+    {
+      "id": "manual-20261024-2336",
+      "date": "2026-10-24",
+      "time": "23:36",
+      "durationMinutes": 19,
+      "result": "loss",
+      "mode": "排位赛 五排",
+      "note": "",
+      "source": "manual",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "",
+          "role": "中路",
+          "rating": 13.2,
+          "mvp": true,
+          "kills": 3,
+          "deaths": 2,
+          "assists": 13
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "",
+          "role": "",
+          "rating": 7.3,
+          "mvp": false,
+          "kills": 5,
+          "deaths": 8,
+          "assists": 8
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "",
+          "role": "",
+          "rating": 8.6,
+          "mvp": false,
+          "kills": 3,
+          "deaths": 4,
+          "assists": 12
+        },
+        {
+          "name": "Swiftie",
+          "hero": "",
+          "role": "",
+          "rating": 6.8,
+          "mvp": false,
+          "kills": 4,
+          "deaths": 6,
+          "assists": 3
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "",
+          "role": "",
+          "rating": 7.5,
+          "mvp": false,
+          "kills": 3,
+          "deaths": 8,
+          "assists": 7,
+          "accountName": "你好绿绿"
+        }
+      ]
+    },
+    {
+      "id": "manual-20261024-2321",
+      "date": "2026-10-24",
+      "time": "23:21",
+      "durationMinutes": 11,
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "",
+      "source": "manual",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "",
+          "role": "",
+          "rating": 8.3,
+          "mvp": false,
+          "kills": 5,
+          "deaths": 3,
+          "assists": 6
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "",
+          "role": "",
+          "rating": 8.5,
+          "mvp": false,
+          "kills": 4,
+          "deaths": 1,
+          "assists": 8
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "",
+          "role": "对抗路",
+          "rating": 10.7,
+          "mvp": true,
+          "kills": 5,
+          "deaths": 3,
+          "assists": 4
+        },
+        {
+          "name": "Swiftie",
+          "hero": "",
+          "role": "",
+          "rating": 7.7,
+          "mvp": false,
+          "kills": 3,
+          "deaths": 1,
+          "assists": 5
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "",
+          "role": "游走",
+          "rating": 10.6,
+          "mvp": false,
+          "kills": 2,
+          "deaths": 1,
+          "assists": 14,
+          "accountName": "你好绿绿"
+        }
+      ]
+    },
+    {
+      "id": "manual-20261024-2300",
+      "date": "2026-10-24",
+      "time": "23:00",
+      "durationMinutes": 16,
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "",
+      "source": "manual",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "",
+          "role": "游走",
+          "rating": 11.5,
+          "mvp": false,
+          "kills": 2,
+          "deaths": 1,
+          "assists": 18
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "",
+          "role": "",
+          "rating": 9.7,
+          "mvp": false,
+          "kills": 7,
+          "deaths": 3,
+          "assists": 11
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "",
+          "role": "",
+          "rating": 6.1,
+          "mvp": false,
+          "kills": 3,
+          "deaths": 4,
+          "assists": 2
+        },
+        {
+          "name": "Swiftie",
+          "hero": "",
+          "role": "中路",
+          "rating": 11.8,
+          "mvp": false,
+          "kills": 6,
+          "deaths": 1,
+          "assists": 11
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "",
+          "role": "发育路",
+          "rating": 12.1,
+          "mvp": true,
+          "kills": 6,
+          "deaths": 2,
+          "assists": 12,
+          "accountName": "你好绿绿"
+        }
+      ]
+    },
+    {
+      "id": "manual-20261024-2238",
+      "date": "2026-10-24",
+      "time": "22:38",
+      "durationMinutes": 18,
+      "result": "loss",
+      "mode": "排位赛 五排",
+      "note": "",
+      "source": "manual",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "",
+          "role": "中路",
+          "rating": 10.9,
+          "mvp": true,
+          "kills": 5,
+          "deaths": 5,
+          "assists": 4
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "",
+          "role": "",
+          "rating": 8.9,
+          "mvp": false,
+          "kills": 2,
+          "deaths": 4,
+          "assists": 6
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "",
+          "role": "",
+          "rating": 6.8,
+          "mvp": false,
+          "kills": 4,
+          "deaths": 5,
+          "assists": 5
+        },
+        {
+          "name": "Swiftie",
+          "hero": "",
+          "role": "",
+          "rating": 5.3,
+          "mvp": false,
+          "kills": 3,
+          "deaths": 6,
+          "assists": 3
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "",
+          "role": "",
+          "rating": 6.8,
+          "mvp": false,
+          "kills": 1,
+          "deaths": 7,
+          "assists": 8,
+          "accountName": "你好绿绿"
+        }
+      ]
+    },
+    {
+      "id": "manual-20261024-2222",
+      "date": "2026-10-24",
+      "time": "22:22",
+      "durationMinutes": 11,
+      "result": "loss",
+      "mode": "排位赛 五排",
+      "note": "",
+      "source": "manual",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "",
+          "role": "",
+          "rating": 5.9,
+          "mvp": false,
+          "kills": 2,
+          "deaths": 5,
+          "assists": 4
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "",
+          "role": "",
+          "rating": 6.5,
+          "mvp": false,
+          "kills": 2,
+          "deaths": 4,
+          "assists": 7
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "",
+          "role": "",
+          "rating": 6.1,
+          "mvp": false,
+          "kills": 3,
+          "deaths": 4,
+          "assists": 2
+        },
+        {
+          "name": "Swiftie",
+          "hero": "",
+          "role": "",
+          "rating": 5.1,
+          "mvp": false,
+          "kills": 4,
+          "deaths": 5,
+          "assists": 1
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "",
+          "role": "游走",
+          "rating": 10.3,
+          "mvp": true,
+          "kills": 3,
+          "deaths": 2,
+          "assists": 7,
+          "accountName": "你好绿绿"
+        }
+      ]
+    },
+    {
+      "id": "manual-20261024-2204",
+      "date": "2026-10-24",
+      "time": "22:04",
+      "durationMinutes": 15,
+      "result": "win",
+      "mode": "排位赛 五排",
+      "note": "",
+      "source": "manual",
+      "players": [
+        {
+          "name": "呜呀捉飞鸡",
+          "hero": "",
+          "role": "游走",
+          "rating": 9.6,
+          "mvp": false,
+          "kills": 1,
+          "deaths": 5,
+          "assists": 23
+        },
+        {
+          "name": "玩家大薄荷糖",
+          "hero": "",
+          "role": "打野",
+          "rating": 10.6,
+          "mvp": false,
+          "kills": 7,
+          "deaths": 1,
+          "assists": 17
+        },
+        {
+          "name": "只求爱的人",
+          "hero": "",
+          "role": "",
+          "rating": 7.9,
+          "mvp": false,
+          "kills": 2,
+          "deaths": 4,
+          "assists": 13
+        },
+        {
+          "name": "Swiftie",
+          "hero": "",
+          "role": "",
+          "rating": 9.7,
+          "mvp": false,
+          "kills": 7,
+          "deaths": 4,
+          "assists": 12
+        },
+        {
+          "name": "积极向上的名",
+          "hero": "",
+          "role": "发育路",
+          "rating": 13.8,
+          "mvp": true,
+          "kills": 11,
+          "deaths": 1,
+          "assists": 12,
+          "accountName": "你好绿绿"
+        }
+      ]
+    },
     {
       "id": "1791473820",
       "date": "2026-10-08",
